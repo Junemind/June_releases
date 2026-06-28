@@ -1,4 +1,3 @@
-# June_releases
 <div align="center">
 
 # Junê
@@ -8,7 +7,7 @@ Junê turns your files into a private knowledge graph and answers questions over
 
 [**⬇ Download for macOS**](https://github.com/Junemind/June_releases/releases/latest/download/June-mac-arm64.dmg) ·
 [**⬇ Download for Windows**](https://github.com/Junemind/June_releases/releases/latest/download/June-Setup.exe) ·
-[Website](https://junemind.com) ·
+[Website](https://june.januraine.ai) ·
 [All releases](https://github.com/Junemind/June_releases/releases)
 
 </div>
@@ -64,7 +63,7 @@ the hosted engine.
 - **Pro — $10/mo (or $90/yr)** — a richer on-device graph, cited answers & chat, and vault sync.
 - **Team — $25/seat/mo** — a hosted engine with shared, isolated workspaces.
 
-Subscribe on the [website](https://junemind.com/#/pricing). After payment you're emailed an
+Subscribe on the [website](https://june.januraine.ai/#/pricing). After payment you're emailed an
 **activation code** — paste it in **Settings → Account** in the app and Pro turns on (and stays on
 automatically while your subscription is active). Signing in with the same email restores Pro on any
 device.
@@ -109,8 +108,8 @@ The same key also powers the optional **"Use my LLM"** media-extraction mode.
 
 ## Support & links
 
-- 🌐 Website — <https://junemind.com>
-- 💳 Pricing & Pro — <https://junemind.com/#/pricing>
+- 🌐 Website — <https://june.januraine.ai>
+- 💳 Pricing & Pro — <https://june.januraine.ai/#/pricing>
 - 🐞 Issues & feedback — [open an issue](https://github.com/Junemind/June_releases/issues)
 
 <div align="center">
