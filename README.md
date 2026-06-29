@@ -1,4 +1,4 @@
-<div align="center">
+
 
 # Junê
 
@@ -24,9 +24,9 @@ Junê turns your files into a private knowledge graph and answers questions over
 These links always point at the **latest** release. Older versions and full notes are on the
 [Releases](https://github.com/Junemind/June_releases/releases) page.
 
-> This repository holds **only the installers** — Junê's source code is private. Downloads are
-> safe to install; see [Opening it the first time](#opening-it-the-first-time) for the one-time
-> OS prompt on unsigned builds.
+> This repository holds **only the installers** — Junê's source code is private. The **macOS**
+> build is signed + notarized by Apple and opens cleanly; the **Windows** build isn't signed yet,
+> so see [Opening it the first time](#opening-it-the-first-time) for its one-time SmartScreen prompt.
 
 ---
 
@@ -79,16 +79,11 @@ device.
 
 ### Opening it the first time
 
-Current builds aren't notarized/code-signed yet, so your OS shows a one-time warning. This is
-expected — here's how to proceed:
-
-- **macOS** — if you see *"Apple could not verify this app"*: open **System Settings → Privacy &
-  Security**, scroll to the bottom, and click **Open Anyway**. (Or right-click the app →
-  **Open** → **Open**.)
-- **Windows** — if **SmartScreen** appears: click **More info → Run anyway**.
-
-After the first launch, Junê opens normally every time. Signed + notarized builds are on the way;
-the download links won't change.
+- **macOS** — the app is **signed and notarized by Apple**, so it opens normally — no warning, no
+  workaround.
+- **Windows** — the build isn't code-signed yet, so **SmartScreen** may appear on first launch.
+  Click **More info → Run anyway**. After the first launch it opens normally every time. (A signed
+  Windows build is planned; the download link won't change.)
 
 ---
 
@@ -112,6 +107,5 @@ The same key also powers the optional **"Use my LLM"** media-extraction mode.
 - 💳 Pricing & Pro — <https://june.januraine.ai/#/pricing>
 - 🐞 Issues & feedback — [open an issue](https://github.com/Junemind/June_releases/issues)
 
-<div align="center">
-<sub>© Junê. Installers only — source is private. Built to keep your context yours. 🌒</sub>
-</div>
+
+© Junê. Installers only — source is private. Built to keep your context yours. 🌒
