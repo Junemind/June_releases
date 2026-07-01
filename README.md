@@ -1,4 +1,3 @@
-<!-- This is the README for the PUBLIC Junemind/June_releases repo. Copy it there as README.md. -->
 
 # Junê — Downloads & Getting Started
 
@@ -52,30 +51,24 @@ set to **On-device**, **Use my LLM** (with a key you provide), or **Off** (the d
 
 ---
 
-## On-device vs Hosted extraction
+## How Pro entity extraction works
 
-Junê's richer entity extraction (a **Pro** feature) can run in two places. Same result in your
-graph — the difference is *where the work happens* and *what that requires*.
+Pro sharpens the entities in your graph — more precise people, organizations, and places. On the
+desktop app this richer step runs **hosted**: the heavy work is done on June's servers, so the app
+stays lightweight (no large model to download). Crucially, **only the text being analyzed leaves your
+machine — your knowledge graph is built and stored locally, exactly like Free.** The graph itself
+never leaves your device.
 
-| | **On-device** | **Hosted** |
-|---|---|---|
-| Where it runs | Your own computer | June's servers |
-| What leaves your machine | **Nothing** | Only the **text being analyzed** — your graph never leaves |
-| Where your graph is stored | On your machine | On your machine (identical) |
-| Needs internet | No (after a one-time model download) | Yes |
-| First-time setup | Downloads a model file once | None |
-| Best for | Maximum privacy; working offline | Laptops that can't run the model locally; lightweight machines |
+- **Needs:** an internet connection and an active Pro subscription.
+- **What's sent:** just the text of the chunk being processed, for that one step. Nothing else.
+- **What stays local:** everything — the graph, your files, your search.
 
-**How to think about it.** In *both* modes your knowledge graph is built and stored **locally** — the
-choice only affects the one heavy step of recognizing entities in your text.
+Free users keep Junê's fast, fully-local built-in extraction; Pro adds the richer hosted step and
+one-click **Enrich** for graphs you've already built.
 
-- Pick **On-device** if you want everything to stay on your machine and don't mind a one-time
-  download, or if you work offline.
-- Pick **Hosted** if your machine is light on resources or you'd rather not download the model — the
-  step runs on our servers and only the text of the current chunk is sent. Your graph stays put.
-
-You choose this in **Settings**. Free users get Junê's fast built-in extraction; the richer
-extraction (either mode) is part of Pro.
+> **On-device is available for *media*, not entities.** Reading text out of images and audio (OCR /
+> transcription) *does* offer a fully on-device mode that sends nothing — see **Media extraction**
+> above. The Pro entity step is the part that runs hosted on desktop.
 
 ---
 
@@ -83,9 +76,8 @@ extraction (either mode) is part of Pro.
 
 Junê is free to use. **Pro** adds:
 
-- **Richer entities** — more precise people, organizations, and places, for a cleaner, better-connected graph.
+- **Richer entities** — more precise people, organizations, and places, for a cleaner, better-connected graph. The heavy step runs hosted; your graph stays on your machine (see above).
 - **Enrich existing graphs** — one click to re-process a canvas you already built.
-- **Hosted or on-device** — run the heavy step whichever way suits your machine (see above).
 - **A usage meter** — **Settings → Account** shows hosted extractions used against your monthly allowance.
 
 **To turn on Pro:** subscribe on the website, and you'll be emailed an **activation code**. In the
@@ -94,8 +86,9 @@ subscription is active). Signing in with the same email restores Pro on any devi
 
 ## Privacy
 
-Your knowledge graph is stored **locally** on your device in every mode. On-device extraction sends
-**nothing**; hosted extraction sends **only the text being analyzed** for that step — never the graph.
+Your knowledge graph is stored **locally** on your device — always, on Free and Pro alike. Pro's
+hosted entity step sends **only the text being analyzed**, never the graph. On-device media
+extraction sends **nothing** at all.
 
 ## Supported platforms
 
