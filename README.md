@@ -154,5 +154,14 @@ tools.
 
 ---
 
+## Where's the source code?
+
+Junê's engine is closed-source by design. The public artifacts are
+[`june-bench`](https://github.com/Junemind/june-bench) — a pip-installable suite that
+reproduces Junê's published head-to-head results (matching accuracy at 20–25× lower
+cost) on public datasets, end to end, on your own machine — and
+[`june-mcp`](https://github.com/Junemind/june-mcp), the open connector that plugs Junê
+into any MCP-capable agent.
+
 Questions or a bug? [Open an issue](https://github.com/Junemind/June_releases/issues). Thanks for
 using Junê. 🌒
