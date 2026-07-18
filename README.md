@@ -1,3 +1,6 @@
+<!-- This is the README for the PUBLIC Junemind/June_releases repo. Copy it there as README.md. -->
+<!-- Version-free by design: nothing here names a release, so it never needs a per-release edit. -->
+<!-- Anything version-specific belongs in that release's notes, not here. -->
 
 # Junê — Downloads & Getting Started
 
@@ -6,9 +9,11 @@ graph** that lives on your own machine. Point it at a folder, a PDF, a spreadshe
 and Junê pulls out the people, places, organizations, and ideas inside — and connects them. Instead
 of a pile of files, you get a map of what you know, that you can search and reason over.
 
-And as of **v0.0.4**, that map is something your **AI agents can use too**: connect Claude Desktop
-(or any MCP agent) to your graph with one click, and it gains a memory — cited answers from your
-data, and the ability to remember new things into it.
+And that map isn't just something you look at. You can **talk to it** — ask questions in a chat that
+remembers the conversation, teach it new facts, correct it, and undo anything it wrote. And your
+**AI agents can use it too**: connect Claude Desktop (or any MCP agent) to your graph with one
+click, and it gains a memory — cited answers from your data, and the ability to remember new things
+into it.
 
 This repository hosts the **installers**. Grab the latest below.
 
@@ -19,8 +24,8 @@ This repository hosts the **installers**. Grab the latest below.
 | **macOS** — Apple Silicon (macOS 12+) | [**June-mac-arm64.dmg**](https://github.com/Junemind/June_releases/releases/latest/download/June-mac-arm64.dmg) |
 | **Windows** — 10 / 11 (64-bit) | [**June-Setup.exe**](https://github.com/Junemind/June_releases/releases/latest/download/June-Setup.exe) |
 
-These links always point to the newest release. For a specific version, see
-[**Releases**](https://github.com/Junemind/June_releases/releases).
+These links always point to the newest release. For a specific version — and for what changed in
+each one — see [**Releases**](https://github.com/Junemind/June_releases/releases).
 
 ---
 
@@ -40,18 +45,24 @@ These links always point to the newest release. For a specific version, see
    grows with you.
 2. **Search.** Type a question or a keyword. Junê searches across everything you've ingested and
    returns the passages that matter — not just exact-word matches, but related ideas too.
-3. **Explore the graph.** Open the **Explorer** to see how people, places, and topics connect. Click
+3. **Talk to your graph.** Open the **Agent** tab and just ask. Junê answers from your graph with
+   citations, remembers the conversation so follow-ups work, and gives an honest "I don't have
+   anything about that" when your graph doesn't know — instead of a guess. Type `/` in the composer
+   to see everything the chat can do: save new facts (`/remember`), delete with confirmation
+   (`/delete`), reverse any action (`/undo`), draw a live mini-map of a node's neighbourhood
+   (`/graph`), review duplicate suggestions (`/review`), and more.
+4. **Explore the graph.** Open the **Explorer** to see how people, places, and topics connect. Click
    a node to see what it's linked to and where it came from.
-4. **Organize with canvases.** A **canvas** is an isolated workspace with its own graph. Keep work
+5. **Organize with canvases.** A **canvas** is an isolated workspace with its own graph. Keep work
    and personal separate, or spin up one per project — nothing leaks between them.
-5. **Connect your AI agent.** Give Claude Desktop (or any MCP agent) a memory backed by your graph —
+6. **Connect your AI agent.** Give Claude Desktop (or any MCP agent) a memory backed by your graph —
    see the next section.
-6. **(Pro) Enrich what you already built.** Added Pro later? Hit **Enrich** on a canvas and Junê
+7. **(Pro) Enrich what you already built.** Added Pro later? Hit **Enrich** on a canvas and Junê
    re-processes it with the richer extraction — no need to re-upload.
 
 ---
 
-## Give your AI agent a memory (MCP) — new in v0.0.4
+## Give your AI agent a memory (MCP)
 
 Junê's engine runs privately on your machine — and it speaks **MCP** (the Model Context Protocol,
 the open standard AI apps use to reach outside tools). That means Claude Desktop, Claude Code, and
@@ -108,10 +119,10 @@ never leaves your device.
 - **What's sent:** just the text of the chunk being processed, for that one step. Nothing else.
 - **What stays local:** everything — the graph, your files, your search.
 
-As of v0.0.4 the richer extraction covers **text you write in** too — notes, pasted facts, and
-everything your connected agent *remembers* — not just uploaded files. Free users keep Junê's fast,
-fully-local built-in extraction; Pro adds the richer hosted step and one-click **Enrich** for graphs
-you've already built.
+The richer extraction covers **text you write in** too — notes, pasted facts, what you `/remember`
+in the chat, and everything your connected agent *remembers* — not just uploaded files. Free users
+keep Junê's fast, fully-local built-in extraction; Pro adds the richer hosted step and one-click
+**Enrich** for graphs you've already built.
 
 > **On-device is available for *media*, not entities.** Reading text out of images and audio (OCR /
 > transcription) *does* offer a fully on-device mode that sends nothing — see **Media extraction**
@@ -137,7 +148,7 @@ subscription is active). Signing in with the same email restores Pro on any devi
 Your knowledge graph is stored **locally** on your device — always, on Free and Pro alike. Pro's
 hosted entity step sends **only the text being analyzed**, never the graph. On-device media
 extraction sends **nothing** at all. The agent connection is **local-only** (`127.0.0.1`) and puts
-no secrets in any agent's config.
+no secrets in any agent's config. Chats and their undo history are stored locally too, per canvas.
 
 ## Supported platforms
 
@@ -147,21 +158,11 @@ no secrets in any agent's config.
 
 ## What's new
 
-Each [release](https://github.com/Junemind/June_releases/releases) has its own notes. The current
-release is **v0.0.4 — with MCP**: connect Claude Desktop and any AI agent to your graph in one
-click, Pro's richer extraction now covers remembered text, and your plan is visible to connected
-tools.
+Every release ships with its own detailed notes — see
+[**Releases**](https://github.com/Junemind/June_releases/releases) for what's new in the version
+you're downloading, and what changed in the ones before it.
 
 ---
-
-## Where's the source code?
-
-Junê's engine is closed-source by design. The public artifacts are
-[`june-bench`](https://github.com/Junemind/june-bench) — a pip-installable suite that
-reproduces Junê's published head-to-head results (matching accuracy at 20–25× lower
-cost) on public datasets, end to end, on your own machine — and
-[`june-mcp`](https://github.com/Junemind/june-mcp), the open connector that plugs Junê
-into any MCP-capable agent.
 
 Questions or a bug? [Open an issue](https://github.com/Junemind/June_releases/issues). Thanks for
 using Junê. 🌒
